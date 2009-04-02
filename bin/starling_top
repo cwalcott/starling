@@ -46,7 +46,7 @@ end
 def parse(stats_data)
   stats = []
   stats_data.each_line do |line|
-    stats << "#{$1}: #{$2}" if line =~ /STAT (\w+) (\S+)/
+    stats << "#{$1}: #{$2}" if line =~ /STAT ([\w:]+) (\S+)/
   end
   stats.sort
 end
